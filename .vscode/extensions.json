@@ -1,11 +1,11 @@
 {
   "recommendations": [
-    "mikoz.autoflake-extension",
-    "ms-python.black-formatter",
-    "ms-python.flake8",
-    "ms-python.isort",
-    "ms-python.python",
-    "ms-python.vscode-pylance",
+    "mikoz.autoflake-extension",            // 不要なimport等を削除
+    "ms-python.black-formatter",            // pep8準拠のformatter
+    "ms-python.flake8",                     // pep8準拠のlinter
+    "ms-python.isort",                      // importをソート
+    "ms-python.python",                     // 他linter等との連携, debug等
+    "ms-python.vscode-pylance",             // python language server
     "streetsidesoftware.code-spell-checker"
   ]
 }

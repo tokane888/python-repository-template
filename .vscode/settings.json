@@ -1,5 +1,7 @@
 {
   "[python]": {
-      "editor.tabSize": 4 // pythonではpep8準拠し、space4つでインデント
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4 // pythonではpep8準拠し、space4つでインデント
   }
 }

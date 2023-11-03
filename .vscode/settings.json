@@ -1,7 +1,10 @@
 {
   "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true,  // import文をsort
+        "source.fixAll": true            // 未使用のimport文を削除
+    },
     "editor.formatOnSave": true,
-    "editor.tabSize": 4 // pythonではpep8準拠し、space4つでインデント
-  }
+},
 }

@@ -10,4 +10,5 @@
   "cSpell.ignoreRegExpList": [
     "[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+"
   ],
+  "files.insertFinalNewline": true,
 }

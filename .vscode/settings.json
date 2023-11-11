@@ -11,6 +11,9 @@
   "cSpell.ignoreRegExpList": [
     "[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+"
   ],
+  "files.exclude": {
+    "**/.ruff_cache": true,
+  },
   "files.insertFinalNewline": true,
   "git.autofetch": true,
 }

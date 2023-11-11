@@ -5,6 +5,7 @@
         "source.organizeImports": true,  // import文をsort
         "source.fixAll": true            // 未使用のimport文を削除
     },
+    "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
   },
   "cSpell.ignoreRegExpList": [

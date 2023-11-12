@@ -1,4 +1,9 @@
 {
+  "[markdown]": {
+    "editor.codeActionsOnSave": {
+        "source.fixAll.markdownlint": true
+    },
+  },
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.codeActionsOnSave": {

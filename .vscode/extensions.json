@@ -1,7 +1,7 @@
 {
   "recommendations": [
-    "ms-python.python",   // 他linter等との連携, debug等
-    "charliermarsh.ruff",  // rust製の高速なlinter, formatter
+    "ms-python.python",     // 他linter等との連携, debug等
+    "charliermarsh.ruff",   // rust製の高速なlinter, formatter
     "streetsidesoftware.code-spell-checker"
   ]
 }

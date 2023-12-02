@@ -1,20 +1,20 @@
 {
   "[markdown]": {
     "editor.codeActionsOnSave": {
-        "source.fixAll.markdownlint": true
+      "source.fixAll.markdownlint": true
     },
   },
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.codeActionsOnSave": {
-        "source.organizeImports": true,  // import文をsort
-        "source.fixAll": true            // 未使用のimport文を削除
+      "source.organizeImports": true, // import文をsort
+      "source.fixAll": true // 未使用のimport文を削除
     },
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
   },
   "cSpell.ignoreRegExpList": [
-    "[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+"  // 日本語に対してspell checkが正常に機能しないのでcheck対象から除外
+    "[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+" // 日本語に対してspell checkが正常に機能しないのでcheck対象から除外
   ],
   "files.exclude": {
     "**/.ruff_cache": true,

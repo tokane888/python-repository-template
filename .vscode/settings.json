@@ -18,6 +18,7 @@
   ],
   "files.exclude": {
     "**/.ruff_cache": true,
+    "**/__pycache__": true
   },
   "files.insertFinalNewline": true,
   "git.autofetch": true,

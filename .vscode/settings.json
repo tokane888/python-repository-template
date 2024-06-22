@@ -1,14 +1,14 @@
 {
   "[markdown]": {
     "editor.codeActionsOnSave": {
-      "source.fixAll.markdownlint": true
+      "source.fixAll.markdownlint": "explicit"
     },
   },
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true, // import文をsort
-      "source.fixAll": true // 未使用のimport文を削除
+      "source.organizeImports": "explicit", // import文をsort
+      "source.fixAll": "explicit" // 未使用のimport文を削除
     },
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,

@@ -1,4 +1,14 @@
 [tool.ruff]
 # ruff(linter/formatter)の有効ルール。"ALL"は警告が増えすぎたので断念。
 # ルール一覧: https://docs.astral.sh/ruff/rules/
-select = ["E", "F", "W", "I", "N"]
+lint.select = ["E", "F", "W", "I", "N"]
+
+# linter対象から除外するディレクトリ。高速化のために指定
+exclude=[
+    ".git",
+    ".github",
+    ".ruff_cache",
+    ".venv",
+    ".vscode",
+    "__pycache__",
+]

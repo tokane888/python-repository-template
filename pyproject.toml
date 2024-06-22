@@ -1,4 +1,4 @@
 [tool.ruff]
 # ruff(linter/formatter)の有効ルール。"ALL"は警告が増えすぎたので断念。
 # ルール一覧: https://docs.astral.sh/ruff/rules/
-select = ["E", "F", "W", "I", "N"]
+lint.select = ["E", "F", "W", "I", "N"]

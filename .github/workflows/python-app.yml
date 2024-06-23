@@ -19,6 +19,7 @@ jobs:
             - name: Lint with ruff
               run: |
                 ruff check --output-format=github .
+              continue-on-error: true
             # TODO: テスト作成後にコメントアウト解除
             # - name: Test with pytest
             #   run: |

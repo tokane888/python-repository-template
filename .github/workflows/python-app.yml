@@ -4,7 +4,8 @@ jobs:
     lint-and-test:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v4
+            - name: Checkout
+              uses: actions/checkout@v4
             - name: Setup Python 3.10
               uses: actions/setup-python@v5
               with:

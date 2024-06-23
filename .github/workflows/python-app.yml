@@ -1,5 +1,9 @@
 name: Python application
 on: push
+# CI実行時にコミットが追加された場合、高速化のため古いコミットに対するCIは中断
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}-python-app
+  cancel-in-progress: true
 jobs:
     lint-and-test:
         runs-on: ubuntu-latest

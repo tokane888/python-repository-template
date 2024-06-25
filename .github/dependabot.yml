@@ -1,0 +1,6 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: / # パッケージマニフェスト配置先ディレクトリ。ただしGithub actionのみ固定で"/"
+    schedule:
+      interval: daily

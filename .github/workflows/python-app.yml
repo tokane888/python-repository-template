@@ -15,25 +15,14 @@ jobs:
               uses: actions/setup-python@v5
               with:
                 python-version-file: .python-version
-            - name: Get pip cache dir path
-              id: pip-cache
-              run: |
-                echo "dir=$(pip cache dir)" >> "${GITHUB_OUTPUT}"
-            - name: Get pip cache
-              uses: actions/cache@v4
-              with:
-                path: ${{ steps.pip-cache.outputs.dir }}
-                key: ${{ runner.os }}-${{ runner.arch }}-pip-${{ hashFiles('**/requirements.txt') }}
-                restore-keys: |
-                  ${{ runner.os }}-${{ runner.arch }}-pip-
             - name: Install dependencies
               run: |
                 python -m pip install --upgrade pip
-                pip install ruff pytest pytest-cov
-                if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+                pip install poetry
+                poetry install --no-root
             - name: Lint with ruff
               run: |
-                ruff check --output-format=github .
+                poetry run ruff check --output-format=github .
               continue-on-error: true
             # TODO: テスト作成後にコメントアウト解除
             # - name: Test with pytest

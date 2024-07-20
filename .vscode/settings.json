@@ -23,6 +23,9 @@
   },
   "files.insertFinalNewline": true,
   "git.autofetch": true,
+  "python.analysis.extraPaths": [
+    "src"
+  ],
   "python.testing.pytestEnabled": true,
   "python.testing.pytestArgs": [
     "tests"

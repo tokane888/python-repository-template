@@ -28,6 +28,7 @@
   ],
   "python.testing.pytestEnabled": true,
   "python.testing.pytestArgs": [
+    "-s",
     "tests"
   ]
 }

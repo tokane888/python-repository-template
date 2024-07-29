@@ -17,9 +17,11 @@
     "[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+" // 日本語に対してspell checkが正常に機能しないのでcheck対象から除外
   ],
   "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/.pytest_cache": true,
     "**/.ruff_cache": true,
     "**/__pycache__": true,
-    ".pytest_cache": true
   },
   "files.insertFinalNewline": true,
   "git.autofetch": true,

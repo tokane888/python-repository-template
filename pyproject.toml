@@ -4,6 +4,9 @@ version = "0.1.0"
 description = ""
 authors = ["tokane888 <tokane888@gmail.com>"]   # TODO
 readme = "README.md"
+packages = [
+    { include = "python-repository-template", from="src" } # TODO
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"    # TODO

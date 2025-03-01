@@ -1,10 +1,6 @@
 version: 2
 updates:
-  - package-ecosystem: github-actions
-    directory: / # パッケージマニフェスト配置先ディレクトリ。ただしGithub actionのみ固定で"/"
+  - package-ecosystem: pip # パッケージ管理ツール
+    directory: ./ # パッケージマニフェスト配置先ディレクトリ
     schedule:
-      interval: monthly
-  - package-ecosystem: pip
-    directory: ./
-    schedule:
-      interval: monthly
+      interval: monthly # lib更新確認間隔

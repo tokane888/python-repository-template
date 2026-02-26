@@ -1,0 +1,57 @@
+---
+pre-commit:
+  commands:
+    dprint-fmt:
+      run: |
+        files=$(echo "{staged_files}" | tr ' ' '\n' | grep -E '(Dockerfile|\.json|\.md|\.yml|\.yaml|\.toml)$' || true)
+        if [ -n "$files" ]; then
+          echo "$files"
+          echo "$files" | xargs -r dprint fmt
+        fi
+      stage_fixed: true
+
+    ruff-format:
+      run: |
+        files=$(echo "{staged_files}" | tr ' ' '\n' | grep -E '\.py$' || true)
+        if [ -n "$files" ]; then
+          echo "Formatting Python files:"
+          echo "$files"
+          echo "$files" | xargs -r poetry run ruff format
+        fi
+      stage_fixed: true
+
+    ruff-check-fix:
+      run: |
+        files=$(echo "{staged_files}" | tr ' ' '\n' | grep -E '\.py$' || true)
+        if [ -n "$files" ]; then
+          echo "Running ruff auto-fix:"
+          echo "$files"
+          echo "$files" | xargs -r poetry run ruff check --fix
+        fi
+      stage_fixed: true
+
+    cspell:
+      run: |
+        files=$(echo "{staged_files}" | tr ' ' '\n' | grep -E '\.(py|json|yml|yaml|md)$' || true)
+        if [ -n "$files" ]; then
+          echo "Spell checking files:"
+          echo "$files"
+          echo "$files" | xargs -r cspell --no-must-find-files || echo "⚠️  Spelling issues found. Please review and fix if necessary."
+        fi
+      fail_text: ""
+
+pre-push:
+  commands:
+    ruff-lint:
+      run: |
+        echo "Running full ruff lint..."
+        poetry run ruff check .
+
+    pytest:
+      run: |
+        echo "Running tests..."
+        if [ -d "tests" ] && [ -n "$(find tests -name '*.py' -not -name '__init__.py' -print -quit)" ]; then
+          poetry run pytest tests/
+        else
+          echo "No tests found, skipping..."
+        fi

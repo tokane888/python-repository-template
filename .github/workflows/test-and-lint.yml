@@ -1,4 +1,4 @@
-name: Python application
+name: Test and Lint
 on: push
 # CI実行時にコミットが追加された場合、高速化のため古いコミットに対するCIは中断
 concurrency:
@@ -28,3 +28,20 @@ jobs:
             # - name: Test with pytest
             #   run: |
             #     pytest tests.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
+
+    spellcheck:
+        name: Spell Check
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+              with:
+                fetch-depth: 0
+            - name: Run cspell
+              uses: streetsidesoftware/cspell-action@v6
+              with:
+                incremental_files_only: true
+                inline: warning
+                strict: false
+                config: .cspell.json
+              continue-on-error: true

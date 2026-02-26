@@ -1,0 +1,36 @@
+{
+  "ignorePaths": [
+    ".devcontainer/devcontainer.json",
+    "CLAUDE.md",
+    "dist",
+    "poetry.lock",
+    "pyproject.toml",
+    "lefthook.yml",
+    ".pytest_cache",
+    ".ruff_cache",
+    "__pycache__"
+  ],
+  "words": [
+    "anthropics",
+    "azuretools",
+    "charliermarsh",
+    "devcontainers",
+    "foxundermoon",
+    "lefthook",
+    "malva",
+    "markdownlint",
+    "mohsen1",
+    "mypy",
+    "ollama",
+    "pyproject",
+    "pytest",
+    "pymain",
+    "ruff",
+    "tokane",
+    "venv",
+    "virtualenv"
+  ],
+  "ignoreRegExpList": [
+    "[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+"
+  ]
+}
